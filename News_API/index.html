@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AK news</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/line-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+  </head>
+  <body>
+    <nav>
+        <div class="nav-content flex">
+            <div class="img">
+                <img src="image/logotype.png" alt="">
+
+            </div>
+            <div class="header">
+                <ul class="flex">
+                    <li><a href="" id="India" onclick="navElement('India')">India</a></li>
+                    <li><a href="" id="IT" onclick="navElement('IT')">IT</a></li>
+                    <li><a href="" id="Technology" onclick="navElement('Technology')">Technology</a></li>
+                    
+                </ul>
+
+            </div>
+            <div class="search">
+              <input type="text" id="searchValue">
+              <button onclick="getElement()">Search</button>
+
+            </div>
+
+            <div class="hamburger" onclick="openbar()" id="ham">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+    
+            </div>
+        </div>
+        
+    </nav>
+
+    <div class="sidebar" id="side">
+      <div class="header1">
+        
+        <ul >
+            <li ><div class="close" id="cross"  onclick="closebar()"><i  class="las la-times"></i></div></li>
+            <li><a href="" >India</a></li>
+                    <li><a href="" >IT</a></li>
+                    <li><a href="">Technology</a></li>
+            
+        </ul>
+
+    </div>
+   
+
+
+    </div>
+
+    <main>
+      <div class="card-container flex" id="cards-container">
+
+        
+
+    
+      </div>
+      
+    </main>
+
+    <template id="template-news-card">
+      <div class="card-demo">
+        <div class="img1">
+          <img id="newsimg3" src="/image/08pm-modi.jpg" alt="">
+        </div>
+        <div class="content">
+       <h4 id="newstitle">Narendra Modi</h4>
+      <h6 id="newssrc">India </h6>
+       <p id="newsdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi reiciendis incidunt nostrum ipsa impedit excepturi ea laudantium animi optio neque.</p>
+    </div>
+    </div>
+    </template>
+
+
+    
+    
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+  <script>
+ const openbar=()=>{
+  document.getElementById('side').style.display="block";
+  document.getElementById('ham').style.display="None";
+  document.getElementById('cross').style.display="block";
+ }
+ const closebar=()=>{
+  document.getElementById('side').style.display="none";
+  document.getElementById('cross').style.display="none";
+  document.getElementById('ham').style.display="block";
+ }
+
+    
+  </script>
+
+  <script src="js/app.js">
+
+  </script>
+</html>
